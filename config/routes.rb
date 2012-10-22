@@ -1,4 +1,5 @@
 ChefTest::Application.routes.draw do
+  resources :explosion
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
