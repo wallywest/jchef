@@ -1,0 +1,11 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password:
+  host: localhost
+
+test: &test
+  <<: *default
+  database: racc_test
+
