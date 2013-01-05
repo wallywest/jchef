@@ -1,0 +1,4 @@
+test/ export-ignore
+db/ export-ignore
+doc/ export-ignore
+log/ export-ignore
