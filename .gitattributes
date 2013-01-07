@@ -1,4 +1,11 @@
-test/ export-ignore
-db/ export-ignore
-doc/ export-ignore
-log/ export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
+test export-ignore
+db export-ignore
+log export-ignore
+doc export-ignore
+README export-ignore
+features export-ignore
+stories export-ignore
+Capfile export-ignore
+Rakefile export-ignore
