@@ -1,10 +1,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: jchef_dev
+  database: hive_apps
   pool: 5
-  username: jerny
-  password:
+  username: root
+  password: root
   host: localhost
 test:
   adapter: postgresql
@@ -13,14 +13,7 @@ test:
   pool: 5
   username: jerny
   password:
-staging:
-  adapter: postgresql
-  encoding: unicode
-  database: jchef_dev
-  pool: 5
-  username: jerny
-  password:
-  host: localhost
+
 #production:
   #adapter: postgresql
   #encoding: unicode

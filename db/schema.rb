@@ -11,7 +11,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021184749) do
+ActiveRecord::Schema.define(:version => 20130108215734) do
+
+  create_table "apps", :force => true do |t|
+    t.text "name"
+    t.text "repo"
+  end
+
+  create_table "apps_users", :id => false, :force => true do |t|
+    t.integer "app_id"
+    t.integer "user_id"
+  end
+
+  create_table "builds", :force => true do |t|
+    t.string   "version"
+    t.integer  "app_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "migrations", :force => true do |t|
+    t.text     "name",   :null => false
+    t.datetime "ran_at"
+  end
+
+  add_index "migrations", ["name"], :name => "migrations_name_index"
+
+  create_table "users", :force => true do |t|
+    t.text   "username"
+    t.text   "email"
+    t.string "password"
+  end
 
   create_table "web_users", :force => true do |t|
     t.string   "login",                                   :default => ""
