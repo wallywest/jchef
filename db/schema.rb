@@ -11,11 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130108215734) do
+ActiveRecord::Schema.define(:version => 20130125192407) do
 
   create_table "apps", :force => true do |t|
     t.text "name"
     t.text "repo"
+    t.text "url"
   end
 
   create_table "apps_users", :id => false, :force => true do |t|
@@ -30,17 +31,17 @@ ActiveRecord::Schema.define(:version => 20130108215734) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "migrations", :force => true do |t|
-    t.text     "name",   :null => false
-    t.datetime "ran_at"
+  create_table "settings", :force => true do |t|
+    t.boolean "database", :default => true
+    t.text    "server",   :default => "unicorn"
+    t.text    "adapter",  :default => "postgres"
+    t.integer "app_id"
   end
 
-  add_index "migrations", ["name"], :name => "migrations_name_index"
-
   create_table "users", :force => true do |t|
-    t.text   "username"
-    t.text   "email"
-    t.string "password"
+    t.text "username"
+    t.text "email"
+    t.text "password"
   end
 
   create_table "web_users", :force => true do |t|
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20130108215734) do
     t.string   "salt",                      :limit => 40
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+    t.string   "test"
   end
 
 end

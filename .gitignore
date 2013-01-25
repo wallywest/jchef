@@ -18,3 +18,4 @@ JustinGemfile.lock
 vendor/*
 public/*
 log
+.rbenv-version
