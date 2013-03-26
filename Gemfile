@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.13'
 gem "unicorn"
 
 # Bundle edge Rails instead:
