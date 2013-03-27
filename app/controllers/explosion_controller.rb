@@ -3,6 +3,6 @@ class ExplosionController < ApplicationController
   end
 
   def show
-    raise WTF
+    raise "WTF"
   end
 end
